@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header.header{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+}
+header .header_logo img{
+    max-width: 80px;
+}
+nav.header_menu ul{
+    display: flex;
+    list-style-type: none;
+}
+nav.header_menu ul li{
+    padding: 5px;
+}
+nav.header_menu ul li a{
+    text-decoration: none;
+    color: blueviolet;
+}
+nav.header_menu ul li a:hover{
+    color: darkred;
+}
+header .header_cabinet{
+    padding-right: 5px;
+}
+header .header_cabinet a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+header .header_cabinet a:hover{
+    color: darkred;
+}
+
+
+h1{
+    padding: 5px 0 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.container{
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    justify-content: space-between;
+}
+main.main{
+    order:2;
+    padding: 5px;
+    width: 72%;
+}
+main.main h2{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+    color: dodgerblue;
+    text-align: left;
+}
+main.main .late_products{
+    display: flex;
+    flex-wrap: wrap;
+}
+main.main .late_products .late_products__item{
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    padding: 5px 5px 5px 0;
+}
+main.main .late_products .late_products__item img{
+    max-width: 222px;
+}
+main.main .late_products .late_products__item a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+main.main .late_products .late_products__item a:hover{
+    color: darkred;
+}
+
+
+
+aside.sidebar{
+    order:1;
+    padding: 5px;
+    width: 26%;
+}
+aside.sidebar h2{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+}
+aside.sidebar h2 a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+aside.sidebar ul{
+    list-style-type: none;
+}
+aside.sidebar ul li{
+    padding: 3px 0;
+}
+aside.sidebar ul li a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+aside.sidebar ul li a:hover{
+    color: darkred;
+}
+aside.sidebar ul li a.active{
+    color: coral;
+}
+
+
+footer.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: #f2f2f2;
+}
+footer.footer p{
+    font-size: 16px;
+    font-weight: bold;
+}

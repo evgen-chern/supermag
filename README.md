@@ -1,0 +1,2 @@
+# supermag
+ realize mvc fc
