@@ -2,7 +2,7 @@
     <h1>categoryCatalog</h1>
     <section class="container">
         <main class="main">
-            <h2>Товары</h2>
+            <h2>Товары категории</h2>
             <div class="late_products">
                 <?php foreach ($categoryProducts as $product): ?>
                     <div class="late_products__item">
@@ -20,6 +20,7 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php echo $pagination->get();?>
         </main>
         <aside class="sidebar">
             <h2><a href="/catalog/">Каталог</a></h2>

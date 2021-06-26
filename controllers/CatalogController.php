@@ -1,7 +1,5 @@
 <?php
-include_once FILEPLACE . '/models/Category.php';
-include_once FILEPLACE . '/models/Product.php';
-
+//AUTOLOAD
 class CatalogController
 {
 
@@ -18,13 +16,19 @@ class CatalogController
         return true;
     }
 
-    public function actionCategory($categoryId)
+    public function actionCategory($categoryId, $page=1)
     {
         $categories = array();
         $categories = Category::getCategoriesList();
 
         $categoryProducts = array();
-        $categoryProducts = Product::getProductsListByCategory($categoryId);
+        $categoryProducts = Product::getProductsListByCategory($categoryId,$page);
+
+        //TOTAL FOR PAGINATION
+        $total = Product::getTotalProductsInCategory($categoryId);
+
+        //CREATE OBJECT PAGINATION
+        $pagination = new Pagination($total,$page,Product::SHOW_BY_DEFAULT,'page-');
 
         require_once (FILEPLACE . '/views/catalog/category.php');
 

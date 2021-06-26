@@ -6,14 +6,11 @@
     error_reporting(E_ALL);
 
 
-    //2.CONNECT SYSTEM FILES
+    //2.CONNECT SYSTEM FILES AND DB
     define('FILEPLACE', dirname(__FILE__));
-    require_once(FILEPLACE.'/components/Router.php');
-
-    //3.CONNECT DB
-    require_once(FILEPLACE.'/components/Db.php');
+    require_once(FILEPLACE.'/components/Autoload.php');
 
 
-    //4.CALL ROUTER
+    //3.CALL ROUTER
     $FirstRouter = new Router();
     $FirstRouter->run();

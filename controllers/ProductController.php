@@ -1,7 +1,5 @@
 <?php
-include_once FILEPLACE . '/models/Category.php';
-include_once FILEPLACE . '/models/Product.php';
-
+//AUTOLOAD
 class ProductController
 {
     public function actionView($id)
