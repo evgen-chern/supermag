@@ -5,20 +5,40 @@ class UserController
 {
     public function actionRegister()
     {
+        $name = '';
+        $email = '';
+        $password = '';
+        $result = false;
+
         if(isset($_POST['submit'])) {
+
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            if(isset($name)) {
-                echo $name;
+            $errors = false;
+
+            if (!User::checkName($name)) {
+                $errors[] = 'Incorrect name(<2 symbols)';
             }
-            if(isset($email)) {
-                echo $email;
+
+            if (!User::checkEmail($email)) {
+                $errors[] = 'Invalid email';
             }
-            if(isset($password)) {
-                echo $password;
+
+            if (!User::checkPassword($password)) {
+                $errors[] = 'Invalid password(<6 symbols)';
             }
+
+            if (User::checkEmailExists($email)) {
+                $errors[] = 'Email already Exists';
+            }
+
+            if ($errors == false) {
+                //SAVE USER
+                $result = User::register($name,$email,$password);
+            }
+
         }
 
         require_once (FILEPLACE . '/views/user/register.php');
