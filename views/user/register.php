@@ -4,7 +4,7 @@
         <main class="main">
             <h2>Регистрация</h2>
             <?php if($result): ?>
-                <p>You are successfull registered</p>
+                <p>You are successfully registered</p>
             <?php else: ?>
             <?php if(isset($errors) && is_array($errors)): ?>
                 <ul>

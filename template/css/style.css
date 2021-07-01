@@ -30,6 +30,7 @@ header .header_cabinet{
     padding-right: 5px;
 }
 header .header_cabinet a{
+    padding-left: 2px;
     text-decoration: none;
     color: cornflowerblue;
 }

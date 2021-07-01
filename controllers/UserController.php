@@ -45,4 +45,42 @@ class UserController
 
         return true;
     }
+
+    public function actionLogin()
+    {
+        $email = '';
+        $password = '';
+
+        if(isset($_POST['submit'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $errors = false;
+
+            //VALIDATION
+            if(!User::checkEmail($email)) {
+                $errors[] = 'Invalid email';
+            }
+            if(!User::checkPassword($password)) {
+                $errors[] = 'Invalid pass(<6symbol)';
+            }
+
+            //CHECK FOR USER EXISTENCE
+            $userId = User::checkUserData($email,$password);
+
+            if ($userId == false) {
+                //IF NOT -> ERROR
+                $errors[] = 'ERROR EMAIL OR PASSWORD';
+            } else {
+                //ELSE REMEMBER USER
+                User::auth($userId);
+                //RELOCATE IN CABINET
+                header("Location: /cabinet/");
+            }
+
+        }
+        require_once (FILEPLACE . '/views/user/login.php');
+
+        return true;
+    }
 }

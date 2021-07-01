@@ -25,7 +25,9 @@
     </nav>
 
     <div class="header_cabinet">
-        <a href="/">В корзину</a>
-        <a href="/">Мой кабинет</a>
+        <a href="/">To_cart</a>
+        <a href="/user/register/">Reg</a>
+        <a href="/user/login/">Log_in</a>
+        <a href="/cabinet/">My_profile</a>
     </div>
 </header>

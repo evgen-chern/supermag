@@ -9,6 +9,9 @@
         'category/([0-9]+)' => 'catalog/category/$1', //actionCategory in CatalogController
 
         'user/register' => 'user/register', //actionRegister in UserController
+        'user/login' => 'user/login', //actionLogin in UserController
+
+        'cabinet' => 'cabinet/index', //actionIndex in CabinetController
 
         '' => 'site/index', //actionIndex in SiteController
 );
