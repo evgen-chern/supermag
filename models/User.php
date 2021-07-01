@@ -81,8 +81,31 @@ class User
 
     public static function auth($userId)
     {
-        session_start();
+        //SAVE USER
         $_SESSION['user'] = $userId;
+    }
+
+    public static function checkLogged()
+    {
+        //IF SESSION EXIST, RETURN ID USER
+        if (isset($_SESSION['user'])) {
+            return $_SESSION['user'];
+        }
+        header("Location: /user/login/");
+    }
+
+    public static function isGuest()
+    {
+        //IF SESSION NOT EXIST ITS GUEST
+        if(isset($_SESSION['user'])) {
+            return false;
+        }
+        return true;
+    }
+
+    public static function getUserById($id)
+    {
+        
     }
 
 

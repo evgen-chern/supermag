@@ -83,4 +83,11 @@ class UserController
 
         return true;
     }
+
+    public function actionLogout()
+    {
+        //LOGOUT
+        unset($_SESSION["user"]);
+        header("Location: /");
+    }
 }

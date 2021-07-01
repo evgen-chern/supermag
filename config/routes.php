@@ -10,6 +10,7 @@
 
         'user/register' => 'user/register', //actionRegister in UserController
         'user/login' => 'user/login', //actionLogin in UserController
+        'user/logout' => 'user/logout', //actionLogout in UserController
 
         'cabinet' => 'cabinet/index', //actionIndex in CabinetController
 

@@ -20,14 +20,17 @@
             <li><a href="/">First item</a></li>
             <li><a href="/">Second item</a></li>
             <li><a href="/">Third item</a></li>
-            <li><a href="/">Four item</a></li>
         </ul>
     </nav>
 
     <div class="header_cabinet">
         <a href="/">To_cart</a>
+        <?php if(User::isGuest()): ?>
         <a href="/user/register/">Reg</a>
         <a href="/user/login/">Log_in</a>
+        <?php else: ?>
+        <a href="/user/logout/">Log_out</a>
         <a href="/cabinet/">My_profile</a>
+        <?php endif; ?>
     </div>
 </header>
