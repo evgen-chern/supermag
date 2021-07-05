@@ -12,7 +12,9 @@
         'user/login' => 'user/login', //actionLogin in UserController
         'user/logout' => 'user/logout', //actionLogout in UserController
 
+        'cabinet/edit' => 'cabinet/edit', //actionEdit in CabinetController
         'cabinet' => 'cabinet/index', //actionIndex in CabinetController
 
+        'contact' => 'site/contact', //actionContact in SiteController
         '' => 'site/index', //actionIndex in SiteController
 );
