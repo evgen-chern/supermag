@@ -24,7 +24,10 @@
     </nav>
 
     <div class="header_cabinet">
-        <a href="/">To_cart</a>
+        <a href="/cart">
+            <span id="cart-count"><?php echo Cart::countItems();?></span>
+            To_cart
+        </a>
         <?php if(User::isGuest()): ?>
         <a href="/user/register/">Reg</a>
         <a href="/user/login/">Log_in</a>

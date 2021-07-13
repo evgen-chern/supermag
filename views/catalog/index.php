@@ -12,6 +12,9 @@
                         </a>
 
                         <p><?php echo $lateProduct['price']; ?>$</p>
+                        <a href="#" class="add-to-cart" data-id="<?php echo $lateProduct['id'];?>">
+                            ToCart
+                        </a>
 
                         <?php if($lateProduct['is_new']): ?>
                             <p>Новый товар</p>
